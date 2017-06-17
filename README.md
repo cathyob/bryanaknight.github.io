@@ -1,2 +1,3 @@
-# bryanaknight.github.io
-personal blog
+### Thoughts technical and otherwise
+
+#### Bryana Knight
