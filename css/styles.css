@@ -21,6 +21,10 @@ header {
 #blogPostContent {
   font-size: 1.4em;
   font-family: 'Josefin Slab', serif;
+  margin-top: 6%,
+  margin-left: 5%,
+  margin-right: 5%,
+  margin-bottom: 10%
 }
 #contentContainer {
   text-align: center;
