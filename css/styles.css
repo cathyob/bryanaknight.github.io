@@ -18,6 +18,10 @@ header {
   top: 0;
   width: 100%;
 }
+#blogPostContent {
+  font-size: 1.4em;
+  font-family: 'Josefin Slab', serif;
+}
 #contentContainer {
   text-align: center;
   width: 100%;
