@@ -75,6 +75,14 @@ header {
   color: #000000;
 }
 
+.talkLink:link, .postLink:visited {
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+
 .postLink:hover, .postLink:active {
     text-decoration: none;
     color: #14536b;
