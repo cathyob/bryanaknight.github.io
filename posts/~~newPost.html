@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Bryana Knight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/styles-mobile.css" media="only screen and (max-width: 767px)">
+
+<link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<body>
+  <header id="links">
+    <nav class="Main" id="main">
+      <h1>
+        <img class="Headshot" src="../images/bryHeadshot.png" alt="Picture of Bryana Knight" />
+        <a href="./index.html">Bryana Knight</a>
+      </h1>
+      <button class="collapsed Menu" id="menu">Menu<span class="Top"></span>
+        <span class="Middle"></span>
+        <span class="Bottom"></span>
+      </button>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../posts.html">Posts</a>
+        <a href="../talks.html">Talks</a>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main id="content">
+
+    <article>
+      <h1>Title</h1>
+      <span class="Details">Date, Year</span>
+      <p>Content</p>
+    </article>
+
+  </main>
+  
+  <footer>
+    <nav class="footer">
+      <a class="socialLink Github" href="https://github.com/bryanaknight" target="_blank">
+        Github
+      </a>
+      <a class="socialLink Email" href="mailto:brknig11@gmail.com">
+        Email
+      </a>
+      <a class="socialLink LinkedIn" href="https://www.linkedin.com/in/bryanaknight" target="_blank">
+        LinkedIn
+      </a>
+      <a class="socialLink Twitter" href="https://twitter.com/bryanaknight" target="_blank">
+        Twitter
+      </a>
+    </nav>
+  </footer>
+  <script>
+    document.getElementById('menu').addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
+      if (this.classList.contains("collapsed")) {
+        this.classList.remove("collapsed");
+        document.getElementById("links").classList.remove("collapsed")
+        this.classList.add("expanded");
+        document.getElementById("links").classList.add("expanded")
+      } else {
+        this.classList.remove("expanded");
+        document.getElementById("links").classList.remove("expanded")
+        this.classList.add("collapsed");
+        document.getElementById("links").classList.add("collapsed")
+      }
+    }  
+  </script>
+</body>

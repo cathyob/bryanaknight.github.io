@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Bryana Knight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles-mobile.css" media="only screen and (max-width: 767px)">
+
+<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+<body>
+    <header id="links">
+        <nav class="Main" id="main">
+            <h1>
+                <img class="Headshot" src="images/bryHeadshot.png" alt="Picture of Bryana Knight" />
+                <a href="./index.html">Bryana Knight</a>
+            </h1>
+            <button class="collapsed Menu" id="menu">Menu<span class="Top"></span>
+                <span class="Middle"></span>
+                <span class="Bottom"></span>
+            </button>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./posts.html">Posts</a>
+                <a href="./talks.html" class="Active">Talks</a>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main id="content">
+        <section class="Container">
+            <a class="Link" href="https://confreaks.tv/videos/railsconf2017-the-secret-life-of-sql-how-to-optimize-database-performance" target="_blank">
+                <!-- can remove target="_blank" and Source detail if not an external link -->
+                <h3>The Secret Life of SQL: How to optimize Database Performance</h3>
+                <span class="Details">Railsconf, Phoenix</span>
+                <span class="Details">2017</span>
+                <p class="Description">There are a lot of database index and query best practices that sometimes aren't best practices at all. Need all users created this year? No problem! Slap an index over created_at! What about this year's active OR pending users, sorted by username? Are we still covered index-wise? Is the query as fast with 20 million users? Common rules of thumb for indexing and query crafting aren’t black and white. We'll discuss how to track down these exceptional cases and walk through some real examples. You'll leave so well equipped to improve performance, you won't be able to optimize fast enough!</p>
+            </a>
+        </section>
+        
+        <section class="Container">
+            <a class="Link" href="https://speakerdeck.com/bryanaknight/50-shades-of-database-performance-optimization" target="_blank">
+                <!-- can remove target="_blank" and Source detail if not an external link -->
+                <h3>50 Shades of Database Performance Optimization</h3>
+                <span class="Details">SyntaxCon, Charleston</span>
+                <span class="Details">2017</span>
+                <p class="Description">Database indexing and query crafting is more of an art than a science. There are a lot of rules of thumb we often follow that work the majority of the time, but not always.
+                    <p class="Description">Need all the users created this year? No problem! Slap an index over created_at and use a simple SELECT with a WHERE and you’re all set! Now just active users? We’ll just stick status on the end of that index and add an AND to that query! What about active OR pending users since January 1st, sorted by username? Are we still covered index-wise? Is our query even using that index? Is it as fast with twenty million users?
+                    </p><p class="Description">We’ll start off with some simple queries and ideal indexes for them based on some general “rules” lots of us use. Then we’ll ramp up and introduce some new, real world factors like larger table size, different data types, and increased traffic.
+                    </p><p class="Description">With those in mind looking at a few fairly more involved queries, you’ll learn how to identify where those best practices fall down, why, and how to find the best optimization.
+                    </p><p class="Description">We’ll have fun breaking the “rules” and writing new ones that work for us.
+                    </p>
+                </p>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="footer">
+            <a class="socialLink Github" href="https://github.com/bryanaknight" target="_blank">
+                Github
+            </a>
+            <a class="socialLink Email" href="mailto:brknig11@gmail.com">
+                Email
+            </a>
+            <a class="socialLink LinkedIn" href="https://www.linkedin.com/in/bryanaknight" target="_blank">
+                LinkedIn
+            </a>
+            <a class="socialLink Twitter" href="https://twitter.com/bryanaknight" target="_blank">
+                Twitter
+            </a>
+        </nav>
+    </footer>
+    <script>
+        document.getElementById('menu').addEventListener('click', toggleMenu);
+
+        function toggleMenu() {
+            if (this.classList.contains("collapsed")) {
+                this.classList.remove("collapsed");
+                document.getElementById("links").classList.remove("collapsed")
+                this.classList.add("expanded");
+                document.getElementById("links").classList.add("expanded")
+            } else {
+                this.classList.remove("expanded");
+                document.getElementById("links").classList.remove("expanded")
+                this.classList.add("collapsed");
+                document.getElementById("links").classList.add("collapsed")
+            }
+        }  
+    </script>
+</body>

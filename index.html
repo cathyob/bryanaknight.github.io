@@ -1,58 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>Bryana Knight</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway|" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles-mobile.css" media="only screen and (max-width: 767px)">
+
+<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 <body>
-  <div class="banner">
-    <img class="header" src="images/bryBanner.png" alt="Bryana Knight Banner"/>
-  </div>
-  <main id="contentContainer">
-    <header>
-      <h1 class="headline">Bryana Knight</h1>
-      <h2 class="subHead">Thoughts technical and otherwise!</h2>
-      <img src="images/bryHeadshot.png" alt="Picture of Bryana Knight" id="headshot"/>
-    </header>
+  <header id="links">
+    <nav class="Main" id="main">
+      <h1> 
+        <img class="Headshot" src="images/bryHeadshot.png" alt="Picture of Bryana Knight" />
+        <a href="./index.html" class="Active">Bryana Knight</a>
+      </h1>
+      <button class="collapsed Menu" id="menu">Menu<span class="Top"></span>
+        <span class="Middle"></span>
+        <span class="Bottom"></span>
+      </button>
+      <nav>
+        <a href="./index.html" class="Active">Home</a>
+        <a href="./posts.html">Posts</a>
+        <a href="./talks.html">Talks</a>
+        </ul>
+      </nav>
+    </nav>
+  </header>
 
-<!-- copy section below and update for future posts -->
-<!-- begin blog post -->
-    <section class="blogContainer">
-        <article class="blogPost">
-          <h3>
-            <a href="10_16_2015.html" class="postLink" target="_blank">On being a female on a male dominated engineering team</a>
-          </h3>
-            <!-- <p class="postDescription">My thoughts, experience, and reflection</p> -->
-            <p class="postDate"> October-16-2015</p>
-        </article>
+  <main id="content">
+    <section class="Home Container">
+        <h1><mark>Hi!</mark></h1>
+        <p>My name is Bryana Knight and I am a DC native living in Boston by way of Mallorca, Spain, Denver and Seattle.</p>
+        <p>I work at GitHub as a Software Engineer. I’m also a tech lead for the Women Who Code Boston Chapter.</p>
+        <p>Prior to GitHub, I worked for a Healthcare startup acquired by Aetna, and before that, a startup called LivingSocial (remember the daily deals craze?!).</p>
+        <p>I occasionally write thoughts technical and otherwise down here. If you’d like to get in touch, please reach out!</p>
     </section>
-<!-- end blog post -->
+  </main>
 
-<!-- begin blog post -->
-    <section class="blogContainer">
-        <article class="blogPost">
-          <h3>
-            <a href="speaking_2017.html" class="postLink" target="_blank">This year's talks</a>
-          </h3>
-            <!-- <p class="postDescription">My thoughts, experience, and reflection</p> -->
-            <p class="postDate">2017</p>
-        </article>
-    </section>
-<!-- end blog post -->
-<!-- paste new post here -->
-
-</main>
-<footer>
-    <div class="footer">
-      <a class="socialLink" href="https://github.com/bryanaknight" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-      <a class="socialLink" href="mailto:brknig11@gmail.com"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
-      <a class="socialLink" href="https://www.linkedin.com/in/bryanaknight" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-      <a class="socialLink" href="https://twitter.com/bryanaknight" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-    </div>
+  <footer>
+    <nav class="footer">
+      <a class="socialLink Github" href="https://github.com/bryanaknight" target="_blank">
+        Github
+      </a>
+      <a class="socialLink Email" href="mailto:brknig11@gmail.com">
+        Email
+      </a>
+      <a class="socialLink LinkedIn" href="https://www.linkedin.com/in/bryanaknight" target="_blank">
+        LinkedIn
+      </a>
+      <a class="socialLink Twitter" href="https://twitter.com/bryanaknight" target="_blank">
+        Twitter
+      </a>
+    </nav>
   </footer>
+  <script>
+    document.getElementById('menu').addEventListener('click', toggleMenu);
 
+    function toggleMenu() {
+      if (this.classList.contains("collapsed")) {
+        this.classList.remove("collapsed");
+        document.getElementById("links").classList.remove("collapsed")
+        this.classList.add("expanded");
+        document.getElementById("links").classList.add("expanded")
+      } else {
+        this.classList.remove("expanded");
+        document.getElementById("links").classList.remove("expanded")
+        this.classList.add("collapsed");
+        document.getElementById("links").classList.add("collapsed")
+      }
+    }  
+  </script>
 </body>
