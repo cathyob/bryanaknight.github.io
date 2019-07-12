@@ -1,0 +1,33 @@
+html {
+    background-size: 100% 250px;
+}
+header > nav, footer {
+    padding: 1rem 1.5rem;
+}
+nav.Main {
+    justify-content: flex-end;
+}
+nav.Main h1 {
+    flex: 100%;
+}
+nav.Main h1 a {
+    flex-grow: 1
+}
+nav.Main button {
+    order: -1;
+}
+header.expanded nav.Main nav {
+    padding-top: 1rem;
+}
+main {
+    padding: 16px 24px;
+}
+main > section:first-of-type, main > article:first-of-type {
+    margin-top: 6rem;
+}
+main > section + section {
+    border-top: 1px solid var(--transparentDarkPink);
+}
+.Container.Home {
+    padding: 2rem 1rem;
+}
